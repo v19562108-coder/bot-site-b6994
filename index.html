@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Кофейня «Утренний Бриз»</title>
+<style>
+:root{--c1:#6f4e37;--c2:#4b3621;--bg:#f6efe6;--cream:#fff8ef;--acc:#c98a5e;--gold:#e0b97a}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--c2);margin:0;padding:0;line-height:1.6}
+.hero{text-align:center;padding:56px 20px 40px;background:linear-gradient(135deg,#3a2a1e,#6f4e37 60%,#8a5a3b);color:#fff;border-radius:0 0 30px 30px}
+.hero h1{font-size:2.6rem;margin:0 0 8px;letter-spacing:.5px}
+.hero .tag{font-size:1.2rem;color:var(--gold);font-weight:600;margin:0 0 20px}
+.hero .visual{font-size:6em;margin:16px 0;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35));animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.about{max-width:860px;margin:30px auto;padding:30px;background:var(--cream);border-radius:20px;box-shadow:0 6px 20px rgba(75,54,33,.12);text-align:center}
+.about h2{color:var(--c1);margin:0 0 12px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.chip{background:var(--c1);color:#fff;padding:8px 16px;border-radius:30px;font-size:.9rem}
+.section-title{text-align:center;font-size:1.9rem;color:var(--c1);margin:36px 0 20px}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;max-width:1000px;margin:0 auto;padding:0 16px}
+.card{background:var(--cream);border-radius:18px;padding:22px;width:285px;box-shadow:0 6px 18px rgba(75,54,33,.14);text-align:center;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-8px);box-shadow:0 14px 28px rgba(75,54,33,.22)}
+.visual{height:150px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:4.5em;background:linear-gradient(135deg,#e8d5bc,#f6efe6);margin-bottom:16px}
+.card h3{margin:0 0 8px;color:var(--c1);font-size:1.25rem}
+.card p{font-size:.95rem;margin:0 0 14px;color:#5a4632}
+.price{display:inline-block;background:var(--acc);color:#fff;font-size:1.15rem;padding:6px 18px;border-radius:24px;font-weight:700}
+footer{max-width:900px;margin:44px auto 30px;padding:32px 24px;background:var(--c1);color:#fdf5ec;border-radius:20px;text-align:center}
+footer h3{margin:0 0 16px;color:var(--gold);font-size:1.5rem}
+footer p{margin:6px 0}
+#petBtn{position:fixed;bottom:20px;right:20px;width:64px;height:64px;border-radius:50%;background:var(--acc);border:none;font-size:32px;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,.3);z-index:99;transition:transform .2s}
+#petBtn:hover{transform:scale(1.12) rotate(-8deg)}
+</style></head>
+<body>
+<div class="hero"><h1>Кофейня «Утренний Бриз»</h1><p class="tag">Кофе, который будит вдохновение</p><div class="visual">☕️</div></div>
+<div class="about"><h2>О нас</h2><p>Мы — уютная кофейня в центре города с собственной обжаркой зёрен. Работаем с 2018 года и используем только арабику спешелти-класса. У нас есть зона для работы с ноутбуками и детская комната.</p>
+<div class="chips"><span class="chip">🫘 Своя обжарка</span><span class="chip">👩‍💻 Зона для ноутбуков</span><span class="chip">🧸 Детская комната</span></div></div>
+<div class="section-title">Наше меню 🥐</div>
+<div class="cards">
+<div class="card"><div class="visual">☕️</div><h3>Капучино «Бриз»</h3><p>Нежная пена, двойной эспрессо и щепотка корицы — имба для утра, без базара! ☕</p><b class="price">250 ₽</b></div>
+<div class="card"><div class="visual">🥐</div><h3>Латте «Облако»</h3><p>Много молока и мягкий вкус — идеально к завтраку. Топ, чтобы начать день! 🥛</p><b class="price">280 ₽</b></div>
+<div class="card"><div class="visual">🍋</div><h3>Раф «Цитрус»</h3><p>Сливки, эспрессо и домашний лимонный сироп — авторская пушка! Попробуй и забудешь про всё остальное. 🫘</p><b class="price">320 ₽</b></div>
+</div>
+<footer><h3>📞 Контакты</h3><p>📍 г. Москва, ул. Кофейная, д. 12, стр. 3 (вход со двора, арка с вывеской «Бриз»)</p><p>🚶 От метро «Цветной бульвар» идти 5 минут прямо по Садовой-Самотечной, повернуть направо во двор между домами 10 и 14</p><p>📱 +7 (999) 123-45-67</p><p>✉️ hello@morningbreeze.ru</p><p>🕒 Пн–Пт 07:00–22:00, Сб–Вс 09:00–23:00</p></footer>
+<button id="petBtn">☕️</button>
+<script>const b=document.getElementById('petBtn');b.onmouseover=()=>{b.style.left=Math.random()*(innerWidth-70)+'px';b.style.top=Math.random()*(innerHeight-70)+'px'}</script>
+</body></html>
